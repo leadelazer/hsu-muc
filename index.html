@@ -1,538 +1,596 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>München Geschichte</title>
-    
-    <!-- PWA Meta Tags -->
-    <meta name="theme-color" content="#2c5282">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-title" content="München Geschichte">
-    
-    <!-- Manifest -->
-    <link rel="manifest" href="manifest.json">
-    
-    <!-- iOS Meta Tags -->
-    <link rel="apple-touch-icon" href="icon.png">
-    
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>München Geschichte</title>
+
+  <!-- PWA Meta Tags -->
+  <meta name="theme-color" content="#2c5282">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="München Geschichte">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+
+
+  <!-- Manifest -->
+  <link rel="manifest" href="manifest.json">
+
+  <!-- iOS Meta Tags -->
+  <link rel="apple-touch-icon" href="icon.png">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
+
 <body>
 
-<!-- Haupt-Container -->
-<div class="app">
-  <!-- Header -->
-  <header>
-    <h1>München Geschichte</h1>
-  </header>
+  <!-- Haupt-Container -->
+  <div class="app">
+    <!-- Header -->
+    <header>
+      <h1>München Geschichte</h1>
+    </header>
 
-  <!-- Karten-Container -->
-  <div class="cards-wrapper">
-    <div class="cards-container">
+    <!-- Karten-Container -->
+    <div class="cards-wrapper">
+      <div class="cards-container">
 
-      <!-- Karte 1: Zeitalter -->
-      <div class="card theme-basics">
-        <div class="card-inner">
-          <h2>Die drei Zeitalter</h2>
-          <div class="card-content">
-            <p>Die Geschichte wird in drei große Zeitalter (Epochen) eingeteilt:</p>
-            <ul>
-              <span class="highlight">Antike → Mittelalter → Neuzeit</span>
-            </ul>
-            <p class="note">Diese Einteilung hilft uns, geschichtliche Ereignisse zeitlich einzuordnen.</p>
+
+        <!-- Karte 1: Zeitalter -->
+        <div class="card theme-basics">
+          <div class="card-inner">
+            <h2>Die drei Zeitalter</h2>
+            <div class="card-content">
+              <p>Die Geschichte wird in drei große Zeitalter (Epochen) eingeteilt:</p>
+              <ul>
+                <span class="highlight">Antike → Mittelalter → Neuzeit</span>
+              </ul>
+              <p class="note">Diese Einteilung hilft uns, geschichtliche Ereignisse zeitlich einzuordnen.</p>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- Karte 2: Zeitspannen 1 -->
-      <div class="card theme-basics">
-        <div class="card-inner">
-          <h2>Wichtige Zeitspannen I</h2>
-          <div class="card-content">
-            <span class="highlight">Ein Jahrtausend = 1000 Jahre</span>
-            <p>Beispiel: 1000-2000</p>
-            <span class="highlight">Ein Jahrhundert = 100 Jahre</span>
-            <p>Beispiel: 1500-1600</p>
+        <!-- Karte 2: Zeitspannen 1 -->
+        <div class="card theme-basics">
+          <div class="card-inner">
+            <h2>Wichtige Zeitspannen</h2>
+            <div class="card-content">
+              <span class="highlight">Ein Jahrtausend = 1000 Jahre</span>
+              <p>Beispiel: 1000-2000</p>
+              <span class="highlight">Ein Jahrhundert = 100 Jahre</span>
+              <p>Beispiel: 1500-1600</p>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- Karte 3: Zeitspannen 2 -->
-      <div class="card theme-basics">
-        <div class="card-inner">
-          <h2>Wichtige Zeitspannen II</h2>
-          <div class="card-content">
-            <span class="highlight">Ein Jahrzehnt = 10 Jahre</span>
-            <p>Beispiel: 1780-1790</p>
-            <p class="note">Merke: Vor Christi Geburt schreiben wir "v.Chr.",<br>nach Christi Geburt "n.Chr."</p>
+        <!-- Karte 3: Zeitspannen 2 -->
+        <div class="card theme-basics">
+          <div class="card-inner">
+            <h2>Wichtige Zeitspannen</h2>
+            <div class="card-content">
+              <span class="highlight">Ein Jahrzehnt = 10 Jahre</span>
+              <p>Beispiel: 1780-1790</p>
+              <p class="note">Merke: Vor Christi Geburt schreiben wir "v.Chr.",<br>nach Christi Geburt "n.Chr."</p>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- Karte 4: Schriftliche und Mündliche Quellen -->
-      <div class="card theme-sources">
-        <div class="card-inner">
-          <h2>Historische Quellen I</h2>
-          <div class="card-content">
-            <span class="highlight">Schriftliche Quellen:</span>
-            <ul>
-              <li>Bücher</li>
-              <li>Briefe</li>
-              <li>Urkunden</li>
-            </ul>
-            <span class="highlight">Mündliche Quellen:</span>
-            <ul>
-              <li>Erzählungen</li>
-              <li>Überlieferte Geschichten</li>
-            </ul>
+        <!-- Karte 4: Schriftliche und Mündliche Quellen -->
+        <div class="card theme-sources">
+          <div class="card-inner">
+            <h2>Historische Quellen</h2>
+            <div class="card-content">
+              <span class="highlight">Schriftliche Quellen:</span>
+              <ul>
+                <li>Bücher</li>
+                <li>Briefe</li>
+                <li>Urkunden</li>
+              </ul>
+              <span class="highlight">Mündliche Quellen:</span>
+              <ul>
+                <li>Erzählungen</li>
+                <li>Überlieferte Geschichten</li>
+              </ul>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- Karte 5: Andere Quellenarten -->
-      <div class="card theme-sources">
-        <div class="card-inner">
-          <h2>Historische Quellen II</h2>
-          <div class="card-content">
-            <span class="highlight">Sachquellen:</span>
-            <ul>
-              <li>Gegenstände</li>
-              <li>Gebäude</li>
-              <li>Werkzeuge</li>
-            </ul>
-            <span class="highlight">Bildquellen:</span>
-            <ul>
-              <li>Fotos</li>
-              <li>Gemälde</li>
-            </ul>
+        <div class="card visual">
+          <div class="card-inner"></div>
+        </div>
+
+
+        <!-- Karte 5: Andere Quellenarten -->
+        <div class="card theme-sources">
+          <div class="card-inner">
+            <h2>Historische Quellen</h2>
+            <div class="card-content">
+              <span class="highlight">Sachquellen:</span>
+              <ul>
+                <li>Gegenstände</li>
+                <li>Gebäude</li>
+                <li>Werkzeuge</li>
+              </ul>
+              <span class="highlight">Bildquellen:</span>
+              <ul>
+                <li>Fotos</li>
+                <li>Gemälde</li>
+              </ul>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- Karte 6: Audiovisuelle Quellen -->
-      <div class="card theme-sources">
-        <div class="card-inner">
-          <h2>Historische Quellen III</h2>
-          <div class="card-content">
-            <span class="highlight">Audiovisuelle Quellen:</span>
-            <ul>
-              <li>Video-Aufnahmen</li>
-              <li>Tonaufnahmen</li>
-            </ul>
-            <p class="note">Diese helfen uns, das Leben der Menschen früher zu verstehen!</p>
+        <!-- Karte 6: Audiovisuelle Quellen -->
+        <div class="card theme-sources">
+          <div class="card-inner">
+            <h2>Historische Quellen</h2>
+            <div class="card-content">
+              <span class="highlight">Audiovisuelle Quellen:</span>
+              <ul>
+                <li>Video-Aufnahmen</li>
+                <li>Tonaufnahmen</li>
+              </ul>
+              <p class="note">Diese helfen uns, das Leben der Menschen früher zu verstehen!</p>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- Karte 1: Kelten Einführung -->
-      <div class="card theme-celts">
-        <div class="card-inner">
-          <h2>Die Kelten - Erste Bewohner</h2>
-          <div class="card-content">
-            <p>Die Kelten waren <span class="highlight">ab etwa 500 v.Chr.</span> die ersten Bewohner unserer Gegend.</p>
-            <p class="note">v.Chr. bedeutet "vor Christi Geburt"</p>
+
+  
+
+        <!-- Karte 1: Kelten Einführung -->
+        <div class="card theme-celts">
+          <div class="card-inner">
+            <h2>Die Kelten - Erste Bewohner</h2>
+            <div class="card-content">
+              <p>Die Kelten waren <span class="highlight">ab etwa 500 v.Chr.</span> die ersten Bewohner unserer Gegend.
+              </p>
+              <p class="note">v.Chr. bedeutet "vor Christi Geburt"</p>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- Karte 2: Keltische Siedlungen -->
-      <div class="card theme-celts">
-        <div class="card-inner">
-          <h2>Wie lebten die Kelten?</h2>
-          <div class="card-content">
-            <span class="highlight">Siedlungsformen:</span>
-            <ul>
-              <li>Dörfer</li>
-              <li>Einzelhöfe</li>
-            </ul>
-            <p class="note">Die Häuser waren aus Holz und bestanden meist nur aus einem Raum.</p>
+        <!-- Karte 2: Keltische Siedlungen -->
+        <div class="card theme-celts">
+          <div class="card-inner">
+            <h2>Wie lebten die Kelten?</h2>
+            <div class="card-content">
+              <span class="highlight">Siedlungsformen:</span>
+              <ul>
+                <li>Dörfer</li>
+                <li>Einzelhöfe</li>
+              </ul>
+              <p class="note">Die Häuser waren aus Holz und bestanden meist nur aus einem Raum.</p>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- Karte 3: Keltische Gesellschaft -->
-      <div class="card theme-celts">
-        <div class="card-inner">
-          <h2>Keltische Gesellschaft</h2>
-          <div class="card-content">
-            <p>Die Kelten lebten in <span class="highlight">Stämmen</span> zusammen</p>
-            <p>Sie waren hauptsächlich <span class="highlight">Bauern</span></p>
-            <p class="note">In Stämmen zu leben bot Schutz und ermöglichte gemeinsames Arbeiten</p>
+        <!-- Karte 3: Keltische Gesellschaft -->
+        <div class="card theme-celts">
+          <div class="card-inner">
+            <h2>Keltische Gesellschaft</h2>
+            <div class="card-content">
+              <p>Die Kelten lebten in <span class="highlight">Stämmen</span> zusammen</p>
+              <p>Sie waren hauptsächlich <span class="highlight">Bauern</span></p>
+              <p class="note">In Stämmen zu leben bot Schutz und ermöglichte gemeinsames Arbeiten</p>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- Karte 4: Keltisches Handwerk -->
-      <div class="card theme-celts">
-        <div class="card-inner">
-          <h2>Keltisches Handwerk</h2>
-          <div class="card-content">
-            <p>Die Kelten waren besonders geschickt in:</p>
-            <span class="highlight">Eisenverarbeitung</span>
-            <p>Da es keine Geschäfte gab, mussten sie fast alles:</p>
-            <span class="highlight">selbst herstellen</span>
+        <!-- Karte 4: Keltisches Handwerk -->
+        <div class="card theme-celts">
+          <div class="card-inner">
+            <h2>Keltisches Handwerk</h2>
+            <div class="card-content">
+              <p>Die Kelten waren besonders geschickt in:</p>
+              <span class="highlight">Eisenverarbeitung</span>
+              <p>Da es keine Geschäfte gab, mussten sie fast alles:</p>
+              <span class="highlight">selbst herstellen</span>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- Karte 5: Keltischer Handel -->
-      <div class="card theme-celts">
-        <div class="card-inner">
-          <h2>Keltischer Handel</h2>
-          <div class="card-content">
-            <p>Waren aus fernen Ländern erhielten sie durch:</p>
-            <span class="highlight">Tauschhandel</span>
-            <p class="note">Dabei wurden Waren direkt gegen andere Waren getauscht, da es noch kein Geld gab.</p>
+        <!-- Karte 5: Keltischer Handel -->
+        <div class="card theme-celts">
+          <div class="card-inner">
+            <h2>Keltischer Handel</h2>
+            <div class="card-content">
+              <p>Waren aus fernen Ländern erhielten sie durch:</p>
+              <span class="highlight">Tauschhandel</span>
+              <p class="note">Dabei wurden Waren direkt gegen andere Waren getauscht, da es noch kein Geld gab.</p>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- Karte 6: Römer Einführung -->
-      <div class="card theme-romans">
-        <div class="card-inner">
-          <h2>Die Römer kommen</h2>
-          <div class="card-content">
-            <p>Die Römer kamen <span class="highlight">um etwa 15 v.Chr.</span> nach Bayern</p>
-            <p>Sie stammten aus <span class="highlight">Italien</span></p>
-            <p>Ihr Ziel: <span class="highlight">Ihr Reich erweitern</span></p>
+        <!-- Karte 6: Römer Einführung -->
+        <div class="card theme-romans">
+          <div class="card-inner">
+            <h2>Die Römer kommen</h2>
+            <div class="card-content">
+              <p>Die Römer kamen <span class="highlight">um etwa 15 v.Chr.</span> nach Bayern</p>
+              <p>Sie stammten aus <span class="highlight">Italien</span></p>
+              <p>Ihr Ziel: <span class="highlight">Ihr Reich erweitern</span></p>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- Karte 7: Römische Häuser -->
-      <div class="card theme-romans">
-        <div class="card-inner">
-          <h2>Römische Bauweise</h2>
-          <div class="card-content">
-            <p>Anders als die Kelten lebten die Römer in:</p>
-            <span class="highlight">Steinhäusern mit mehreren Räumen</span>
-            <p class="note">Dies war ein großer Fortschritt gegenüber den einfachen Holzhäusern der Kelten</p>
+        <div class="card visual">
+          <div class="card-inner"></div>
+        </div>
+  
+
+        <!-- Karte 7: Römische Häuser -->
+        <div class="card theme-romans">
+          <div class="card-inner">
+            <h2>Römische Bauweise</h2>
+            <div class="card-content">
+              <p>Anders als die Kelten lebten die Römer in:</p>
+              <span class="highlight">Steinhäusern mit mehreren Räumen</span>
+              <p class="note">Dies war ein großer Fortschritt gegenüber den einfachen Holzhäusern der Kelten</p>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- Karte 8: Römische Armee -->
-      <div class="card theme-romans">
-        <div class="card-inner">
-          <h2>Die römische Armee</h2>
-          <div class="card-content">
-            <p>Die Römer hatten eine:</p>
-            <span class="highlight">große und gut organisierte Armee</span>
-            <p>Für ihre Armeen bauten sie:</p>
-            <span class="highlight">Straßen aus Stein</span>
-            <p class="note">Viele dieser Römerstraßen sind heute noch erhalten!</p>
+        <!-- Karte 8: Römische Armee -->
+        <div class="card theme-romans">
+          <div class="card-inner">
+            <h2>Die römische Armee</h2>
+            <div class="card-content">
+              <p>Die Römer hatten eine:</p>
+              <span class="highlight">große und gut organisierte Armee</span>
+              <p>Für ihre Armeen bauten sie:</p>
+              <span class="highlight">Straßen aus Stein</span>
+              <p class="note">Viele dieser Römerstraßen sind heute noch erhalten!</p>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- Karte 9: Römischer Handel -->
-      <div class="card theme-romans">
-        <div class="card-inner">
-          <h2>Römische Handelswege</h2>
-          <div class="card-content">
-            <p>Die Römer waren geschickte Händler:</p>
-            <ul>
-              <li>Nutzten die Straßen für den Handel</li>
-              <li>Verbanden verschiedene Handelsstädte</li>
-              <li>Verwendeten <span class="highlight">Münzen</span> als Zahlungsmittel</li>
-            </ul>
+        <!-- Karte 9: Römischer Handel -->
+        <div class="card theme-romans">
+          <div class="card-inner">
+            <h2>Römische Handelswege</h2>
+            <div class="card-content">
+              <p>Die Römer waren geschickte Händler:</p>
+              <ul>
+                <li>Nutzten die Straßen für den Handel</li>
+                <li>Verbanden verschiedene Handelsstädte</li>
+                <li>Verwendeten <span class="highlight">Münzen</span> als Zahlungsmittel</li>
+              </ul>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- Karte 1: Bajuwaren Ankunft -->
-      <div class="card theme-bajuvarians">
-        <div class="card-inner">
-          <h2>Die Bajuwaren kommen</h2>
-          <div class="card-content">
-            <p>Um das Jahr <span class="highlight">530 n.Chr.</span> kamen die Bajuwaren ins Isartal</p>
-            <p>Sie stammten aus <span class="highlight">Baja (Böhmen)</span></p>
+        <!-- Karte 1: Bajuwaren Ankunft -->
+        <div class="card theme-bajuvarians">
+          <div class="card-inner">
+            <h2>Die Bajuwaren kommen</h2>
+            <div class="card-content">
+              <p>Um das Jahr <span class="highlight">530 n.Chr.</span> kamen die Bajuwaren ins Isartal</p>
+              <p>Sie stammten aus <span class="highlight">Baja (Böhmen)</span></p>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- Karte 2: Bajuwaren Gesellschaft -->
-      <div class="card theme-bajuvarians">
-        <div class="card-inner">
-          <h2>Leben in Sippen</h2>
-          <div class="card-content">
-            <p>Die Bajuwaren lebten in <span class="highlight">Sippen</span>:</p>
-            <ul>
-              <li>Das waren Gemeinschaften/Großfamilien</li>
-              <li>Jede Sippe hatte einen <span class="highlight">Sippenführer</span></li>
-            </ul>
+
+
+        <!-- Karte 2: Bajuwaren Gesellschaft -->
+        <div class="card theme-bajuvarians">
+          <div class="card-inner">
+            <h2>Leben in Sippen</h2>
+            <div class="card-content">
+              <p>Die Bajuwaren lebten in <span class="highlight">Sippen</span>:</p>
+              <ul>
+                <li>Das waren Gemeinschaften/Großfamilien</li>
+                <li>Jede Sippe hatte einen <span class="highlight">Sippenführer</span></li>
+              </ul>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- Karte 3: Bajuwaren Siedlungen -->
-      <div class="card theme-bajuvarians">
-        <div class="card-inner">
-          <h2>Wo siedelten die Bajuwaren?</h2>
-          <div class="card-content">
-            <p>Sie siedelten am <span class="highlight">Isarhochufer</span></p>
-            <p>Gründe dafür:</p>
-            <ul>
-              <li>Schutz vor Feinden</li>
-              <li>Schutz vor Überschwemmungen</li>
-            </ul>
+        <!-- Karte 3: Bajuwaren Siedlungen -->
+        <div class="card theme-bajuvarians">
+          <div class="card-inner">
+            <h2>Wo siedelten die Bajuwaren?</h2>
+            <div class="card-content">
+              <p>Sie siedelten am <span class="highlight">Isarhochufer</span></p>
+              <p>Gründe dafür:</p>
+              <ul>
+                <li>Schutz vor Feinden</li>
+                <li>Schutz vor Überschwemmungen</li>
+              </ul>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- Karte 4: Bajuwaren Ortsnamen -->
-      <div class="card theme-bajuvarians">
-        <div class="card-inner">
-          <h2>Die -ing Orte</h2>
-          <div class="card-content">
-            <p>Jedes Dorf wurde nach dem <span class="highlight">jeweiligen Sippenführer</span> benannt</p>
-            <p>Man erkennt diese Orte noch heute an der Endung <span class="highlight">-ing</span></p>
-            <p class="note">Diese Dörfer sind älter als die Stadt München!</p>
+        <!-- Karte 4: Bajuwaren Ortsnamen -->
+        <div class="card theme-bajuvarians">
+          <div class="card-inner">
+            <h2>Die -ing Orte</h2>
+            <div class="card-content">
+              <p>Jedes Dorf wurde nach dem <span class="highlight">jeweiligen Sippenführer</span> benannt</p>
+              <p>Man erkennt diese Orte noch heute an der Endung <span class="highlight">-ing</span></p>
+              <p class="note">Diese Dörfer sind älter als die Stadt München!</p>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- Karte 5: Münchens Ursprung - Die Mönche -->
-      <div class="card theme-munich-origin">
-        <div class="card-inner">
-          <h2>Die Mönche kommen</h2>
-          <div class="card-content">
-            <p>Vor mehr als <span class="highlight">1000 Jahren</span> (um 900 n.Chr.) kamen Benediktinermönche aus den Klöstern:</p>
-            <ul>
-              <li>Tegernsee</li>
-              <li>Schäftlarn</li>
-            </ul>
-            <p>Sie predigten den <span class="highlight">christlichen Glauben</span></p>
+        <div class="card theme-bajuvarians">
+          <div class="card-inner">
+            <h2>Die -ing Orte</h2>
+            <div class="card-content">
+            <p>Beispiele heutiger Stadtteile:</p>
+              <ul>
+                <li><span class="highlight">Sending</span> (Sippe des Sento)</li>
+                <li><span class="highlight">Giesing</span> (Sippe des Kyso)</li>
+                <li><span class="highlight">Pasing</span> (Sippe des Paso)</li>
+                <li><span class="highlight">Schwabing</span> (Sippe des Swapo)</li>
+              </ul>
+              <p class="note">Diese Namen erinnern noch heute an die alten Sippenführer der Bajuwaren!</p>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- Karte 6: Der Petersbergl -->
-      <div class="card theme-munich-origin">
-        <div class="card-inner">
-          <h2>Die erste Kirche</h2>
-          <div class="card-content">
-            <p>Die Mönche errichteten eine Kirche:</p>
-            <ul>
-              <li>Auf einem Hügel nahe der Isar</li>
-              <li>Geweiht dem <span class="highlight">Heiligen Petrus</span></li>
-            </ul>
-            <p>Heute kennt man:</p>
-            <ul>
-              <li>Die Kirche als <span class="highlight">"Alter Peter"</span></li>
-              <li>Den Hügel als <span class="highlight">Petersbergl</span></li>
-            </ul>
+        <div class="card visual">
+          <div class="card-inner"></div>
+        </div>
+  
+
+        <!-- Karte 5: Münchens Ursprung - Die Mönche -->
+        <div class="card theme-munich-origin">
+          <div class="card-inner">
+            <h2>Die Mönche kommen</h2>
+            <div class="card-content">
+              <p>Vor mehr als <span class="highlight">1000 Jahren</span> (um 900 n.Chr.) kamen Benediktinermönche aus
+                den Klöstern:</p>
+              <ul>
+                <li>Tegernsee</li>
+                <li>Schäftlarn</li>
+              </ul>
+              <p>Sie predigten den <span class="highlight">christlichen Glauben</span></p>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- Karte 7: Leben der Mönche -->
-      <div class="card theme-munich-origin">
-        <div class="card-inner">
-          <h2>Wie lebten die Mönche?</h2>
-          <div class="card-content">
-            <p>Sie legten auf dem steinigen Boden an:</p>
-            <ul>
-              <li><span class="highlight">Wiesen</span></li>
-              <li><span class="highlight">Weiden</span></li>
-            </ul>
-            <p>Sie lebten von:</p>
-            <ul>
-              <li><span class="highlight">Fischfang</span></li>
-              <li><span class="highlight">Jagd</span></li>
-            </ul>
+        <!-- Karte 6: Der Petersbergl -->
+        <div class="card theme-munich-origin">
+          <div class="card-inner">
+            <h2>Die erste Kirche</h2>
+            <div class="card-content">
+              <p>Die Mönche errichteten eine Kirche:</p>
+              <ul>
+                <li>Auf einem Hügel nahe der Isar</li>
+                <li>Geweiht dem <span class="highlight">Heiligen Petrus</span></li>
+              </ul>
+              <p>Heute kennt man:</p>
+              <ul>
+                <li>Die Kirche als <span class="highlight">"Alter Peter"</span></li>
+                <li>Den Hügel als <span class="highlight">Petersbergl</span></li>
+              </ul>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- Karte 8: Der Name München -->
-      <div class="card theme-munich-origin">
-        <div class="card-inner">
-          <h2>Wie entstand der Name "München"?</h2>
-          <div class="card-content">
-            <p>Die Mönche waren die ersten Siedler</p>
-            <p>Die Menschen nannten den Ort:</p>
-            <p><span class="highlight">"bei den Münichen"</span> (bei den Mönchen)</p>
-            <p>Daraus wurde später: <span class="highlight">München</span></p>
-            <p class="note">Das Münchner Wappen zeigt noch heute einen Mönch!</p>
+        <!-- Karte 7: Leben der Mönche -->
+        <div class="card theme-munich-origin">
+          <div class="card-inner">
+            <h2>Wie lebten die Mönche?</h2>
+            <div class="card-content">
+              <p>Sie legten auf dem steinigen Boden an:</p>
+              <ul>
+                <li><span class="highlight">Wiesen, Weiden</span></li>
+              </ul>
+              <p>Sie lebten von:</p>
+              <ul>
+                <li><span class="highlight">Fischfang, Jagd</span></li>
+              </ul>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- Karte 1: Salzhandel Beginn -->
-      <div class="card theme-salt">
-        <div class="card-inner">
-          <h2>Das "weiße Gold"</h2>
-          <div class="card-content">
-            <p>Seit etwa <span class="highlight">1156</span> wurde Salz transportiert:</p>
-            <ul>
-              <li>Von <span class="highlight">Bad Reichenhall</span></li>
-              <li>Nach <span class="highlight">Augsburg</span></li>
-            </ul>
-            <p class="note">Salz war damals sehr wertvoll, deshalb nannte man es "weißes Gold"</p>
+        <div class="card visual">
+          <div class="card-inner"></div>
+        </div>
+
+        <!-- Karte 8: Der Name München -->
+        <div class="card theme-munich-origin">
+          <div class="card-inner">
+            <h2>Wie entstand der Name "München"?</h2>
+            <div class="card-content">
+              <p>Die Mönche waren die ersten Siedler</p>
+              <p>Die Menschen nannten den Ort:</p>
+              <p><span class="highlight">"bei den Münichen"</span> (bei den Mönchen)</p>
+              <p>Daraus wurde später: <span class="highlight">München</span></p>
+              <p class="note">Das Münchner Wappen zeigt noch heute einen Mönch!</p>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- Karte 2: Föhringer Brücke -->
-      <div class="card theme-salt">
-        <div class="card-inner">
-          <h2>Die Brücke bei Föhring</h2>
-          <div class="card-content">
-            <p>Um die Isar zu überqueren, nutzten die Händler:</p>
-            <ul>
-              <li>Eine <span class="highlight">Holzbrücke bei Föhring</span></li>
-              <li>Gehörte <span class="highlight">Bischof Otto von Freising</span></li>
-              <li>Alle Salzhändler mussten <span class="highlight">Brückenzoll</span> bezahlen</li>
-            </ul>
+        <!-- Karte 1: Salzhandel Beginn -->
+        <div class="card theme-salt">
+          <div class="card-inner">
+            <h2>Das "weiße Gold"</h2>
+            <div class="card-content">
+              <p>Seit etwa <span class="highlight">1156</span> wurde Salz transportiert:</p>
+              <ul>
+                <li>Von <span class="highlight">Bad Reichenhall</span></li>
+                <li>Nach <span class="highlight">Augsburg</span></li>
+              </ul>
+              <p class="note">Salz war damals sehr wertvoll, deshalb nannte man es "weißes Gold"</p>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- Karte 3: Herzog Heinrich -->
-      <div class="card theme-salt">
-        <div class="card-inner">
-          <h2>Herzog Heinrichs Plan</h2>
-          <div class="card-content">
-            <p><span class="highlight">Herzog Heinrich der Löwe</span>:</p>
-            <ul>
-              <li>Ließ die Brücke in Föhring <span class="highlight">zerstören</span></li>
-              <li>Baute eine neue Brücke bei München</li>
-              <li>Verlegte den Salzhandel über München</li>
-            </ul>
-            <p class="note">So wollte er selbst vom Salzhandel profitieren</p>
+        <!-- Karte 2: Föhringer Brücke -->
+        <div class="card theme-salt">
+          <div class="card-inner">
+            <h2>Die Brücke bei Föhring</h2>
+            <div class="card-content">
+              <p>Um die Isar zu überqueren, nutzten die Händler:</p>
+              <ul>
+                <li>Eine <span class="highlight">Holzbrücke bei Föhring</span></li>
+                <li>Gehörte <span class="highlight">Bischof Otto von Freising</span></li>
+                <li>Alle Salzhändler mussten <span class="highlight">Brückenzoll</span> bezahlen</li>
+              </ul>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- Karte 4: Augsburger Schied -->
-      <div class="card theme-medieval">
-        <div class="card-inner">
-          <h2>Der Augsburger Schied 1158</h2>
-          <div class="card-content">
-            <p>Der Streit zwischen Herzog und Bischof wurde entschieden:</p>
-            <ul>
-              <li><span class="highlight">1/3 der Einnahmen</span> für den Bischof</li>
-              <li>Die <span class="highlight">Brücke bei München</span> blieb bestehen</li>
-              <li>Der <span class="highlight">Salzhandel</span> lief über München</li>
-            </ul>
-            <p class="note">Dies war die erste urkundliche Erwähnung Münchens!</p>
+        <!-- Karte 3: Herzog Heinrich -->
+        <div class="card theme-salt">
+          <div class="card-inner">
+            <h2>Herzog Heinrichs Plan</h2>
+            <div class="card-content">
+              <p><span class="highlight">Herzog Heinrich der Löwe</span>:</p>
+              <ul>
+                <li>Ließ die Brücke in Föhring <span class="highlight">zerstören</span></li>
+                <li>Baute eine neue Brücke bei München</li>
+                <li>Verlegte den Salzhandel über München</li>
+              </ul>
+              <p class="note">So wollte er selbst vom Salzhandel profitieren</p>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- Karte 5: Münchens erste Stadtmauer -->
-      <div class="card theme-medieval">
-        <div class="card-inner">
-          <h2>Die erste Stadtmauer</h2>
-          <div class="card-content">
-            <p><span class="highlight">1176</span>: Baubeginn der ersten Stadtmauer</p>
-            <ul>
-              <li>Schützte die wachsende Siedlung</li>
-              <li>Zeigte Münchens zunehmende Bedeutung</li>
-            </ul>
-            <p class="note">Eine Stadtmauer war ein Zeichen städtischer Freiheit</p>
+        <!-- Karte 4: Augsburger Schied -->
+        <div class="card theme-medieval">
+          <div class="card-inner">
+            <h2>Der Augsburger Schied 1158</h2>
+            <div class="card-content">
+              <p>Der Streit zwischen Herzog und Bischof wurde entschieden:</p>
+              <ul>
+                <li><span class="highlight">1/3 der Einnahmen</span> für den Bischof</li>
+                <li>Die <span class="highlight">Brücke bei München</span> blieb bestehen</li>
+                <li>Der <span class="highlight">Salzhandel</span> lief über München</li>
+              </ul>
+              <p class="note">Dies war die erste urkundliche Erwähnung Münchens!</p>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- Karte 6: München wird Herzogsstadt -->
-      <div class="card theme-medieval">
-        <div class="card-inner">
-          <h2>Herzogsstadt München</h2>
-          <div class="card-content">
-            <p>Um <span class="highlight">1200</span> wurde München zur Herzogsstadt:</p>
-            <ul>
-              <li>Hauptstadt des <span class="highlight">Herzogtums Bayern</span></li>
-              <li>Bau des <span class="highlight">Alten Hofs</span> beginnt</li>
-            </ul>
-            <p class="note">Der Alte Hof war die erste Residenz der bayerischen Herzöge in München</p>
+        <div class="card visual">
+          <div class="card-inner"></div>
+        </div>
+
+        <!-- Karte 5: Münchens erste Stadtmauer -->
+        <div class="card theme-medieval">
+          <div class="card-inner">
+            <h2>Die erste Stadtmauer</h2>
+            <div class="card-content">
+              <p><span class="highlight">1176</span>: Baubeginn der ersten Stadtmauer</p>
+              <ul>
+                <li>Schützte die wachsende Siedlung</li>
+                <li>Zeigte Münchens zunehmende Bedeutung</li>
+              </ul>
+              <p class="note">Eine Stadtmauer war ein Zeichen städtischer Freiheit</p>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- Karte 7: Zweite Stadtmauer -->
-      <div class="card theme-medieval">
-        <div class="card-inner">
-          <h2>Die Stadt wächst</h2>
-          <div class="card-content">
-            <p><span class="highlight">1285</span>: Baubeginn der zweiten Stadtmauer</p>
-            <ul>
-              <li>Die Stadt war stark gewachsen</li>
-              <li>Neue Mauer schützte größeres Gebiet</li>
-            </ul>
-            <p><span class="highlight">1337</span>: Fertigstellung der Mauer</p>
+        <div class="card visual">
+          <div class="card-inner"></div>
+        </div>
+
+        <!-- Karte 6: München wird Herzogsstadt -->
+        <div class="card theme-medieval">
+          <div class="card-inner">
+            <h2>Herzogsstadt München</h2>
+            <div class="card-content">
+              <p>Um <span class="highlight">1200</span> wurde München zur Herzogsstadt:</p>
+              <ul>
+                <li>Hauptstadt des <span class="highlight">Herzogtums Bayern</span></li>
+                <li>Bau des <span class="highlight">Alten Hofs</span> beginnt</li>
+              </ul>
+              <p class="note">Der Alte Hof war die erste Residenz der bayerischen Herzöge in München</p>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- Karte 8: Mittelalterliche Ereignisse -->
-      <div class="card theme-medieval">
-        <div class="card-inner">
-          <h2>Wichtige Ereignisse</h2>
-          <div class="card-content">
-            <p><span class="highlight">1327</span>: Großer Stadtbrand</p>
-            <ul>
-              <li>Turmspitzen der Peterskirche stark beschädigt</li>
-            </ul>
-            <p><span class="highlight">1630</span>: Die Pest in München</p>
-            <ul>
-              <li>Ein Drittel der Menschen starben</li>
-            </ul>
+        <!-- Karte 7: Zweite Stadtmauer -->
+        <div class="card theme-medieval">
+          <div class="card-inner">
+            <h2>Die Stadt wächst</h2>
+            <div class="card-content">
+              <p><span class="highlight">1285</span>: Baubeginn der zweiten Stadtmauer</p>
+              <ul>
+                <li>Die Stadt war stark gewachsen</li>
+                <li>Neue Mauer schützte größeres Gebiet</li>
+              </ul>
+              <p><span class="highlight">1337</span>: Fertigstellung der Mauer</p>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- Karte 9: Frauenkirche -->
-      <div class="card theme-medieval">
-        <div class="card-inner">
-          <h2>Die Frauenkirche</h2>
-          <div class="card-content">
-            <p>Um <span class="highlight">1400</span>: Baubeginn der Frauenkirche</p>
-            <ul>
-              <li>Wahrzeichen Münchens</li>
-              <li>Die markanten Türme</li>
-              <li>Bis heute erhalten</li>
-            </ul>
+        <!-- Karte 8: Mittelalterliche Ereignisse -->
+        <div class="card theme-medieval">
+          <div class="card-inner">
+            <h2>Wichtige Ereignisse</h2>
+            <div class="card-content">
+              <p><span class="highlight">1327</span>: Großer Stadtbrand</p>
+              <ul>
+                <li>Turmspitzen der Peterskirche stark beschädigt</li>
+              </ul>
+              <p><span class="highlight">1630</span>: Die Pest in München</p>
+              <ul>
+                <li>Ein Drittel der Menschen starben</li>
+              </ul>
+            </div>
           </div>
         </div>
-      </div>
 
-    </div><!-- ende cards container -->
+        <!-- Karte 9: Frauenkirche -->
+        <div class="card theme-medieval">
+          <div class="card-inner">
+            <h2>Die Frauenkirche</h2>
+            <div class="card-content">
+              <p>Um <span class="highlight">1400</span>: Baubeginn der Frauenkirche</p>
+              <ul>
+                <li>Wahrzeichen Münchens</li>
+                <li>Die markanten Türme</li>
+                <li>Bis heute erhalten</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="card visual">
+          <div class="card-inner"></div>
+        </div>
+
+      </div><!-- ende cards container -->
+    </div>
+
+    <!-- Navigation -->
+    <div class="nav">
+      <button class="prev-btn">←</button>
+      <span class="card-count">1/2</span>
+      <button class="next-btn">→</button>
+    </div>
   </div>
 
-  <!-- Navigation -->
-  <div class="nav">
-    <button class="prev-btn">←</button>
-    <span class="card-count">1/2</span>
-    <button class="next-btn">→</button>
-  </div>
-</div>
-
-<script>
-  if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-      navigator.serviceWorker.register('service-worker.js')
-        .then(registration => {
-          console.log('ServiceWorker registered:', registration);
-        })
-        .catch(error => {
-          console.log('ServiceWorker registration failed:', error);
-        });
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('service-worker.js')
+          .then(registration => {
+            console.log('ServiceWorker registered:', registration);
+          })
+          .catch(error => {
+            console.log('ServiceWorker registration failed:', error);
+          });
+      });
+    }
+    // Add to Homescreen Prompt
+    let deferredPrompt;
+    window.addEventListener('beforeinstallprompt', (e) => {
+      e.preventDefault();
+      deferredPrompt = e;
+      // Optional: Zeige einen "Zur Startseite hinzufügen" Button
     });
-  }
-  // Add to Homescreen Prompt
-  let deferredPrompt;
-  window.addEventListener('beforeinstallprompt', (e) => {
-    e.preventDefault();
-    deferredPrompt = e;
-    // Optional: Zeige einen "Zur Startseite hinzufügen" Button
-  });
-</script>
+  </script>
 
 </body>
+
 </html>

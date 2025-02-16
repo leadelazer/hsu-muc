@@ -4,8 +4,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const visualCards = document.querySelectorAll(".card.visual");
     const prevBtn = document.querySelector(".prev-btn");
     const nextBtn = document.querySelector(".next-btn");
-    const firstBtn = document.querySelector(".first-btn"); // NEW: First card button
-    const shuffleBtn = document.querySelector(".shuffle-btn"); // NEW: Shuffle images button
+    const firstBtn = document.querySelector(".first-btn");
+    const shuffleBtn = document.querySelector(".shuffle-btn");
     const cardCount = document.querySelector(".card-count");
 
     let currentIndex = 0;
@@ -13,13 +13,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function assignRandomImages() {
         const imgFolder = "img/";
-        const totalImages = 17; 
+        const totalImages = 17;
         let availableImages = Array.from({ length: totalImages }, (_, i) => `${imgFolder}kawaii-${i + 1}.png`);
 
         availableImages = availableImages.sort(() => Math.random() - 0.5).slice(0, visualCards.length);
 
         visualCards.forEach((card, index) => {
-            card.querySelector(".card-inner").style.backgroundImage = `url(${availableImages[index]})`;
+            const randomVersion = Date.now(); // Unique version to bypass mobile cache
+            card.querySelector(".card-inner").style.backgroundImage = `url(${availableImages[index]}?v=${randomVersion})`;
         });
     }
 
@@ -38,14 +39,12 @@ document.addEventListener("DOMContentLoaded", () => {
         updateUI();
     }
 
-    // 🔄 Function to Shuffle Images & Refresh Cards
-    function shuffleImagesAndReset() {
-        assignRandomImages(); // Assign new images
-        currentIndex = 0; // Reset to first card
-        updateUI();
+    // 🔄 Shuffle Images (Keeps Position)
+    function shuffleImagesKeepPosition() {
+        assignRandomImages(); // Force shuffle without resetting position
     }
 
-    // ⏮ Function to Jump to First Card
+    // ⏮ Jump to First Card
     function jumpToFirstCard() {
         currentIndex = 0;
         updateUI();
@@ -74,14 +73,14 @@ document.addEventListener("DOMContentLoaded", () => {
     // **🎮 Button & Keyboard Navigation**
     prevBtn.addEventListener("click", () => handleSwipe("right"));
     nextBtn.addEventListener("click", () => handleSwipe("left"));
-    firstBtn.addEventListener("click", jumpToFirstCard); // ⏮ Jump to first card
-    shuffleBtn.addEventListener("click", shuffleImagesAndReset); // 🔄 Shuffle images
+    firstBtn.addEventListener("click", jumpToFirstCard);
+    shuffleBtn.addEventListener("click", shuffleImagesKeepPosition);
 
     document.addEventListener("keydown", (event) => {
         if (event.key === "ArrowLeft") handleSwipe("right");
         if (event.key === "ArrowRight") handleSwipe("left");
-        if (event.key === "Home") jumpToFirstCard(); // Home key jumps to first card
-        if (event.key === "r") shuffleImagesAndReset(); // 'r' key shuffles images
+        if (event.key === "Home") jumpToFirstCard();
+        if (event.key === "r") shuffleImagesKeepPosition();
     });
 
     // **🔥 Assign Images & Initialize**

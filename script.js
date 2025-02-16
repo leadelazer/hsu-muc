@@ -1,21 +1,21 @@
 document.addEventListener("DOMContentLoaded", () => {
     const cardsContainer = document.querySelector(".cards-container");
     const cards = document.querySelectorAll(".card");
-    const visualCards = document.querySelectorAll(".card.visual"); // Select only visual cards
+    const visualCards = document.querySelectorAll(".card.visual");
     const prevBtn = document.querySelector(".prev-btn");
     const nextBtn = document.querySelector(".next-btn");
+    const firstBtn = document.querySelector(".first-btn"); // NEW: First card button
+    const shuffleBtn = document.querySelector(".shuffle-btn"); // NEW: Shuffle images button
     const cardCount = document.querySelector(".card-count");
 
     let currentIndex = 0;
     let isSwiping = false;
 
-    // **🔀 Function to Randomly Assign Images Without Repeats**
     function assignRandomImages() {
         const imgFolder = "img/";
-        const totalImages = 17; // Adjust this based on the number of kawaii images available
+        const totalImages = 17; 
         let availableImages = Array.from({ length: totalImages }, (_, i) => `${imgFolder}kawaii-${i + 1}.png`);
 
-        // Shuffle images and assign one per visual card
         availableImages = availableImages.sort(() => Math.random() - 0.5).slice(0, visualCards.length);
 
         visualCards.forEach((card, index) => {
@@ -35,6 +35,19 @@ document.addEventListener("DOMContentLoaded", () => {
         } else if (direction === "right" && currentIndex > 0) {
             currentIndex--;
         }
+        updateUI();
+    }
+
+    // 🔄 Function to Shuffle Images & Refresh Cards
+    function shuffleImagesAndReset() {
+        assignRandomImages(); // Assign new images
+        currentIndex = 0; // Reset to first card
+        updateUI();
+    }
+
+    // ⏮ Function to Jump to First Card
+    function jumpToFirstCard() {
+        currentIndex = 0;
         updateUI();
     }
 
@@ -61,10 +74,14 @@ document.addEventListener("DOMContentLoaded", () => {
     // **🎮 Button & Keyboard Navigation**
     prevBtn.addEventListener("click", () => handleSwipe("right"));
     nextBtn.addEventListener("click", () => handleSwipe("left"));
+    firstBtn.addEventListener("click", jumpToFirstCard); // ⏮ Jump to first card
+    shuffleBtn.addEventListener("click", shuffleImagesAndReset); // 🔄 Shuffle images
 
     document.addEventListener("keydown", (event) => {
         if (event.key === "ArrowLeft") handleSwipe("right");
         if (event.key === "ArrowRight") handleSwipe("left");
+        if (event.key === "Home") jumpToFirstCard(); // Home key jumps to first card
+        if (event.key === "r") shuffleImagesAndReset(); // 'r' key shuffles images
     });
 
     // **🔥 Assign Images & Initialize**
